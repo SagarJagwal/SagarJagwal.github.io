@@ -1,0 +1,102 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sagar Jagwal | Portfolio</title>
+<style>
+:root{--bg:#0b0f17;--panel:#131b28;--text:#edf2f7;--muted:#a5b1c2;--accent:#75e0c1;--line:#293648}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;background:#0b0f17ed;border-bottom:1px solid var(--line);z-index:2}nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{font-weight:800;font-size:19px}.brand span,.accent{color:var(--accent)}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}
+.hero{padding:100px 0 75px}.eyebrow{color:var(--accent);letter-spacing:2px;text-transform:uppercase;font-size:12px;font-weight:bold}h1{font-size:clamp(44px,8vw,82px);line-height:1.04;letter-spacing:-2px;margin:17px 0}h2{font-size:34px;margin:0 0 10px}h3{line-height:1.25}.lead{font-size:20px;color:var(--muted);max-width:750px}
+.btn{display:inline-block;background:var(--accent);color:#0b1716;padding:11px 18px;border-radius:8px;font-weight:bold;margin:12px 8px 0 0}.btn.alt{background:transparent;color:var(--text);border:1px solid var(--line)}section{padding:45px 0;scroll-margin-top:75px}.sub,.muted{color:var(--muted)}
+.skills,.projects{display:grid;gap:16px}.skills{grid-template-columns:repeat(5,1fr)}.projects{grid-template-columns:repeat(2,1fr)}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}.skill p,.project p{color:var(--muted);font-size:14px}.project{display:flex;flex-direction:column;min-height:290px}.meta{color:var(--accent);font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:12px}.tag{font-size:11px;color:#c8d6e5;background:#1b2938;border:1px solid var(--line);padding:4px 9px;border-radius:20px}.links{margin-top:15px;color:var(--accent);font-size:13px;font-weight:bold}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.contact{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:13px}
+@media(max-width:850px){.skills{grid-template-columns:repeat(2,1fr)}.projects,.about{grid-template-columns:1fr}}@media(max-width:540px){.navlinks{gap:10px;font-size:12px}.brand{font-size:15px}.hero{padding:70px 0 45px}}
+
+/* Responsive enhancements */
+html { scroll-padding-top: 82px; }
+body { overflow-x: hidden; }
+img, video, iframe { max-width: 100%; }
+.wrap { width: min(1100px, calc(100% - 40px)); }
+.nav-toggle {
+  display:none; border:1px solid var(--line); background:var(--panel);
+  color:var(--text); border-radius:8px; padding:9px 12px; font-size:18px;
+  cursor:pointer; line-height:1;
+}
+.navlinks a { padding:8px 0; }
+.card, .project, .skill { min-width:0; }
+.project p, .lead, .muted { overflow-wrap:anywhere; }
+.btn { text-align:center; }
+@media (max-width: 850px) {
+  .wrap { width:min(100% - 32px, 720px); }
+  .hero { padding:76px 0 55px; }
+  .skills { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .projects { grid-template-columns:1fr; }
+  .project { min-height:0; }
+  .about { grid-template-columns:1fr; }
+  .contact { align-items:flex-start; }
+}
+@media (max-width: 600px) {
+  header { position:sticky; }
+  nav { min-height:64px; height:auto; position:relative; }
+  .nav-toggle { display:inline-flex; align-items:center; justify-content:center; }
+  .navlinks {
+    display:none; position:absolute; top:calc(100% + 1px); left:-16px; right:-16px;
+    padding:12px 20px 18px; background:#0b0f17;
+    border-bottom:1px solid var(--line); flex-direction:column; gap:4px;
+  }
+  .navlinks.open { display:flex; }
+  .navlinks a { display:block; padding:10px 4px; font-size:15px; }
+  .brand { font-size:16px; }
+  .hero { padding:64px 0 42px; }
+  h1 { font-size:clamp(39px, 12vw, 58px); letter-spacing:-1.8px; }
+  h2 { font-size:29px; }
+  .lead { font-size:17px; }
+  section { padding:36px 0; }
+  .skills { grid-template-columns:1fr; gap:12px; }
+  .card { padding:18px; }
+  .project h3 { font-size:20px; }
+  .btn { margin:8px 6px 0 0; padding:11px 14px; }
+  .contact > div:last-child { display:flex; flex-wrap:wrap; gap:8px; }
+}
+@media (max-width: 360px) {
+  .wrap { width:calc(100% - 24px); }
+  h1 { font-size:37px; }
+  .eyebrow { letter-spacing:1.4px; }
+}
+
+</style></head><body>
+<header><div class="wrap"><nav><a class="brand" href="#home">SAGAR JAGWAL<span>.</span></a><button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-menu">☰</button><div class="navlinks" id="site-menu"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav></div></header>
+<main class="wrap">
+<section class="hero" id="home"><div class="eyebrow">Data • AI • Technology</div><h1>Building with data.<br><span class="accent">Creating with AI.</span></h1><p class="lead">I'm <b style="color:var(--text)">Sagar Jagwal</b> — a multidisciplinary technology enthusiast working across data analytics, machine learning, Generative AI and intelligent agent development. I turn data and ideas into useful solutions.</p><a class="btn" href="#projects">Explore my projects ↘</a><a class="btn alt" href="mailto:jagwalsagar@gmail.com">Get in touch</a></section>
+<section id="about"><div class="eyebrow">Introduction</div><h2>About me</h2><div class="about"><div class="card"><p class="muted">I'm passionate about using technology to solve practical problems. My work spans the data lifecycle — from collecting, cleaning and analyzing data to building predictive machine learning models, interactive dashboards and LLM-powered applications.</p><p class="muted">I enjoy learning emerging technologies, experimenting with AI systems and building projects that connect technical implementation with real-world use cases.</p></div><div class="card"><h3>Areas of interest</h3><p class="muted">Data Analytics · Machine Learning · Generative AI · Retrieval-Augmented Generation · AI Agents · Business Intelligence</p></div></div></section>
+<section id="skills"><div class="eyebrow">What I work with</div><h2>Top 5 skills</h2><p class="sub">Core strengths reflected across my projects.</p><div class="skills">
+<div class="card skill"><b>Python</b><p>Data processing, scripting, automation and AI development.</p></div><div class="card skill"><b>SQL</b><p>Data querying, extraction, transformation and analysis.</p></div><div class="card skill"><b>Machine Learning & Analytics</b><p>EDA, feature engineering, predictive modelling and evaluation.</p></div><div class="card skill"><b>Generative AI & LLMs</b><p>RAG pipelines, LLM applications, agents and evaluation.</p></div><div class="card skill"><b>Data Visualization</b><p>Power BI, Databricks dashboards and visual storytelling.</p></div></div></section>
+<section id="projects"><div class="eyebrow">Selected work</div><h2>Projects</h2><p class="sub">Analytics, machine learning and AI projects.</p><div class="projects">
+<article class="card project"><div class="meta">01 / Machine Learning</div><h3>Customer Churn Prediction Model</h3><p>Developed a machine learning-based churn prediction system. Performed data preprocessing, feature engineering and exploratory data analysis, then trained and evaluated classification models using accuracy, precision, recall and F1-score. Generated insights into customer behaviour to support business decisions.</p><div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">SQL</span><span class="tag">EDA</span></div><div class="links"><a href="https://github.com/SagarJagwal/customer-churn-prediction">GitHub ↗</a></div></article>
+<article class="card project"><div class="meta">02 / Business Intelligence</div><h3>Sales Dashboard</h3><p>Built an interactive sales dashboard to analyze performance, revenue trends and business KPIs. Extracted, cleaned and transformed data, then designed dynamic visualizations and reports to deliver actionable insights and support data-driven decisions.</p><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Data Cleaning</span><span class="tag">Dashboarding</span></div><div class="links"><a href="#">GitHub ↗</a></div></article>
+<article class="card project"><div class="meta">03 / Generative AI</div><h3>Healthcare IoT RAG Pipeline with Accuracy Evaluation</h3><p>Developed a Retrieval-Augmented Generation pipeline for answering technical queries from healthcare IoT device documentation. Implemented metadata-enriched ingestion, structure-aware chunking and vector embeddings, then evaluated retrieval and response quality using RAGAS metrics. Explored hybrid search for exact medical device codes.</p><div class="tags"><span class="tag">LlamaIndex</span><span class="tag">ChromaDB</span><span class="tag">Groq LLM</span><span class="tag">RAGAS</span><span class="tag">Hybrid Search</span></div><div class="links"><a href="https://github.com/SagarJagwal/healthcare-iot-rag-pipeline">GitHub ↗</a></div></article>
+<article class="card project"><div class="meta">04 / AI Engineering</div><h3>Autonomous AI Coding Agent</h3><p>Developed an autonomous AI coding agent that interprets coding tasks, generates code and assists software workflows. Implemented an agent-driven process to execute development steps and manage code changes, integrating Git and GitHub workflows with automated checks for maintainability and reliability.</p><div class="tags"><span class="tag">LLMs</span><span class="tag">AI Agents</span><span class="tag">Python</span><span class="tag">Git</span><span class="tag">GitHub</span></div><div class="links"><a href="https://github.com/SagarJagwal/autonomous-coding-agent">GitHub ↗</a></div></article>
+<article class="card project"><div class="meta">05 / AI Safety</div><h3>AI Agent Guardrails & Evaluation</h3><p>Designed a framework to improve the reliability, safety and performance of AI-powered agents. Focused on evaluating agent responses, detecting hallucinations, preventing unsafe or inappropriate outputs, and checking adherence to predefined instructions and business rules.</p><div class="tags"><span class="tag">AI / ML</span><span class="tag">LLM Evaluation</span><span class="tag">AI Safety</span><span class="tag">Guardrails</span></div><div class="links"><a href="https://github.com/SagarJagwal/ai-agent-guardrails-evaluation">GitHub ↗</a></div></article>
+<article class="card project"><div class="meta">06 / Data Analytics</div><h3>US Carbon Emissions Analysis & Interactive Dashboard</h3><p>Developed an interactive dashboard in Databricks using 2023 US EPA emissions data. Explored CO₂ emissions across states and counties, identified major contributors, compared top-emitting states and examined population versus per-capita emissions to surface environmental insights.</p><div class="tags"><span class="tag">Databricks</span><span class="tag">Data Analytics</span><span class="tag">Data Visualization</span><span class="tag">EPA Data</span></div><div class="links"><a href="https://github.com/SagarJagwal/US-Carbon-Emissions-Analysis-Interactive-Dashboard-Databricks">Project ↗</a></div></article>
+</div></section>
+<section id="contact"><div class="eyebrow">Get in touch</div><div class="card contact"><div><h2>Let's connect.</h2><p class="sub">Open to opportunities, collaborations and conversations.</p><p class="sub">Email: jagwalsagar@gmail.com</p></div><div><a class="btn" href="mailto:jagwalsagar@gmail.com">Email me ↗</a><a class="btn alt" href="https://www.linkedin.com/in/sagar-jagwal" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn alt" href="https://github.com/SagarJagwal" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
+</main><footer><div class="wrap">© 2026 Sagar Jagwal. Built with curiosity and code.</div></footer>
+<script>
+/* site-menu-toggle */
+(() => {
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.navlinks');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    toggle.textContent = isOpen ? '✕' : '☰';
+  });
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation menu');
+    toggle.textContent = '☰';
+  }));
+})();
+</script>
+
+</body></html>
